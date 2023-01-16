@@ -1,0 +1,23 @@
+{
+  "data": [{
+    "type": "item",
+    "id": "1",
+    "attributes": {
+      "title": "JSON TITLE",
+      "body": "JSON Body",
+      "created": "2015-05-22T14:56:29.000Z",
+      "updated": "2015-05-22T14:56:28.000Z"
+    }
+  }],
+  "included": [
+    {
+      "type": "car",
+      "id": "2",
+      "attributes": {
+        "model": "Prius",
+        "year": "2003",
+        "make": "Toyota"
+      }
+    }
+  ]
+}
