@@ -1,0 +1,25 @@
+name: starter-workflow
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build
+    runs-on: [self-hosted, linux]
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+       
+    - name: Get some basic information
+      run: |
+        touch info.txt
+        echo $SHELL >> info.txt
+        whoami >> info.txt
+    
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: Get information file
+        path: ./
